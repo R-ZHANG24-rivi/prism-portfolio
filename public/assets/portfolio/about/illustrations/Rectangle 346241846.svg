@@ -1,0 +1,29 @@
+<svg width="50" height="1117" viewBox="0 0 50 1117" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-70" y="-101" width="189.25" height="1331"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(35px);clip-path:url(#bgblur_0_89_2483_clip_path);height:100%;width:100%"></div></foreignObject><g opacity="0.7" filter="url(#filter0_n_89_2483)" data-figma-bg-blur-radius="70">
+<path d="M0 -31C27.2 -31 49.25 -8.95002 49.25 18.25V1160C22.05 1160 0 1137.95 0 1110.75V-31Z" fill="url(#paint0_linear_89_2483)" style="mix-blend-mode:overlay"/>
+</g>
+<defs>
+<filter id="filter0_n_89_2483" x="-70" y="-101" width="189.25" height="1331" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="100 100" stitchTiles="stitch" numOctaves="3" result="noise" seed="7899" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.1)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_89_2483">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<clipPath id="bgblur_0_89_2483_clip_path" transform="translate(70 101)"><path d="M0 -31C27.2 -31 49.25 -8.95002 49.25 18.25V1160C22.05 1160 0 1137.95 0 1110.75V-31Z"/>
+</clipPath><linearGradient id="paint0_linear_89_2483" x1="49.25" y1="564.5" x2="0" y2="564.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="0.754808" stop-opacity="0.15"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

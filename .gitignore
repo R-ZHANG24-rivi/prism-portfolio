@@ -1,0 +1,13 @@
+tmp/
+output/
+node_modules/
+dist/
+.DS_Store
+.pnpm-store/
+artifacts/
+jam-deck/
+motion-pages/
+vgpu/
+workspace.js
+*.pptx
+*.pptx.inspect.ndjson
