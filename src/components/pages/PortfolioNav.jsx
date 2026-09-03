@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { withBasePath } from '../../utils/paths';
 
 const links = [
   ['about', 'About'],
@@ -18,7 +19,7 @@ export default function PortfolioNav({ activeSection, onNavigateSection, scrolle
 
   return (
     <header className={`portfolio-nav${scrolled ? ' is-scrolled' : ''}${menuOpen ? ' is-menu-open' : ''}`}>
-      <a className="portfolio-nav__brand" href="/#home" aria-label="返回 PRISM 首页" onClick={(event) => handleSectionClick(event, 'home')}>
+      <a className="portfolio-nav__brand" href={withBasePath('/#home')} aria-label="返回 PRISM 首页" onClick={(event) => handleSectionClick(event, 'home')}>
         <span>Home</span>
       </a>
       <button
@@ -34,7 +35,7 @@ export default function PortfolioNav({ activeSection, onNavigateSection, scrolle
         {links.map(([section, label]) => (
           <a
             key={section}
-            href={`/#${section}`}
+            href={withBasePath(`/#${section}`)}
             aria-label={label.toUpperCase()}
             aria-current={activeSection === section ? 'location' : undefined}
             onClick={(event) => handleSectionClick(event, section)}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { withBasePath } from '../../utils/paths';
 
 const padProgress = (value) => String(Math.round(value)).padStart(3, '0');
 
@@ -65,7 +66,7 @@ export default function PrismLoader({ assets = [], onComplete }) {
       <div className="prism-loader__top"><span>RIVI ZHANG</span><span>PORTFOLIO / 2026</span></div>
       <div className="prism-loader__optics" aria-hidden="true">
         <span className="prism-loader__white-beam" style={{ transform: `scaleX(${0.22 + progress * 0.0078})` }} />
-        <img src="/assets/portfolio/home/prism.png" alt="" style={{ opacity: 0.18 + progress * 0.006, transform: `translate(-50%,-50%) rotate(${-6 + progress * 0.07}deg)` }} />
+        <img src={withBasePath('/assets/portfolio/home/prism.png')} alt="" style={{ opacity: 0.18 + progress * 0.006, transform: `translate(-50%,-50%) rotate(${-6 + progress * 0.07}deg)` }} />
         <span className="prism-loader__spectrum" style={{ opacity: progress * 0.008, transform: `scaleX(${progress * 0.01})` }} />
       </div>
       <div className="prism-loader__word" aria-hidden="true"><span>PRI</span><i>SM</i></div>

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { withBasePath } from '../../utils/paths';
 
 export const JOURNEY_SECTIONS = ['home', 'about', 'work', 'beyond', 'ending'];
 
@@ -15,7 +16,7 @@ export default function useJourneyNavigation() {
     if (!target) return;
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (updateHash) window.history.pushState({}, '', `/#${section}`);
+    if (updateHash) window.history.pushState({}, '', withBasePath(`/#${section}`));
     target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
     setCurrentSection(section);
   }, []);

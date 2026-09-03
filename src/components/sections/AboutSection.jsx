@@ -1,3 +1,5 @@
+import { withBasePath } from '../../utils/paths';
+
 export default function AboutSection() {
   return (
     <section id="about" className="about-section black-section" data-chapter="WHITE LIGHT" aria-labelledby="about-title">
@@ -21,7 +23,7 @@ export default function AboutSection() {
         </div>
         <figure className="about-portrait reveal">
           <div className="portrait-light" aria-hidden="true" />
-          <img src="/profile.png" alt="张睿个人肖像" width="170" height="218" />
+          <img src={withBasePath('/profile.png')} alt="张睿个人肖像" width="170" height="218" />
           <figcaption>Hello,<br />I'm Rui Zhang.</figcaption>
         </figure>
       </div>

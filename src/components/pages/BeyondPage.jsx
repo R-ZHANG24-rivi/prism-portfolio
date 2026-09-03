@@ -1,4 +1,5 @@
 import PortfolioNav from './PortfolioNav';
+import { withBasePath } from '../../utils/paths';
 
 const channels = ['Photography', 'Travel', 'Exhibitions', 'Personal Experiments', 'Daily Fragments'];
 
@@ -25,7 +26,7 @@ export default function BeyondPage() {
   return (
     <main>
       <PortfolioNav />
-      <BeyondSection onContinue={() => { window.location.href = '/#ending'; }} />
+      <BeyondSection onContinue={() => { window.location.href = withBasePath('/#ending'); }} />
     </main>
   );
 }

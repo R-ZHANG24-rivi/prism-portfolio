@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { withBasePath } from '../../utils/paths';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -138,7 +139,7 @@ export default function IndexSection({ projects, onOpenProject }) {
 
         <div className="index-orbit__optics" aria-hidden="true">
           <span className="index-orbit__beam" />
-          <img ref={prismRef} src="/assets/portfolio/home/prism.png" alt="" />
+          <img ref={prismRef} src={withBasePath('/assets/portfolio/home/prism.png')} alt="" />
           <i />
         </div>
 

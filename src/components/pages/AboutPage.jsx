@@ -2,6 +2,7 @@ import DisplayTitle from './DisplayTitle';
 import LightColumns from './LightColumns';
 import PortfolioNav from './PortfolioNav';
 import ScaleStage from './ScaleStage';
+import { withBasePath } from '../../utils/paths';
 
 const softwareIcons = [
   'image 6345044-1.png', 'image 6345043.png', 'image 6345044.png', 'image 6345041.png', 'image 6345042.png', 'image 6345040.png',
@@ -15,9 +16,9 @@ const BlockTitle = ({ cn, en, badge }) => (
 export function AboutStage({ onNavigate, fitViewport = false }) {
   return (
       <ScaleStage className="about-stage" fitViewport={fitViewport} preserveSourceRatio>
-        <div className="about-portrait"><img src="/assets/portfolio/about/portrait-composite.png" alt="张睿的个人肖像" /></div>
+        <div className="about-portrait"><img src={withBasePath('/assets/portfolio/about/portrait-composite.png')} alt="张睿的个人肖像" /></div>
         <LightColumns page="about" className="about-columns" count={8} />
-        <img className="about-prism" src="/assets/portfolio/home/prism.png" alt="透明折射棱镜" />
+        <img className="about-prism" src={withBasePath('/assets/portfolio/home/prism.png')} alt="透明折射棱镜" />
         <button className="about-home-link" type="button" onClick={() => onNavigate('/')} aria-label="返回作品集首页"><DisplayTitle variant="about" /></button>
 
         <section className="about-intro">
@@ -46,14 +47,14 @@ export function AboutStage({ onNavigate, fitViewport = false }) {
             <p>协作落地： 产品 / 研发 / 测试协同｜设计评审｜走查验收｜数据验证｜迭代复盘</p>
             <p>方法沉淀： 用户洞察｜结构化拆解｜快速验证｜数据复盘｜可复用设计资产</p>
           </div>
-          <div className="tool-icons">{softwareIcons.map((icon) => <img key={icon} src={`/assets/portfolio/about/icons/${icon}`} alt="" />)}</div>
+          <div className="tool-icons">{softwareIcons.map((icon) => <img key={icon} src={withBasePath(`/assets/portfolio/about/icons/${icon}`)} alt="" />)}</div>
         </section>
 
         <section className="resume-block internship-block">
           <BlockTitle cn="实习经历" en="INTERNSHIP" />
-          <article className="experience-item"><h3><img src="/assets/portfolio/about/icons/image 6345037.png" alt="腾讯" />腾讯新闻｜产品体验设计实习生 <time>2026.04–2026.08</time></h3><p>负责<span>腾讯新闻</span>任务中心信息架构、用户增长、界面升级；上线一周日均 PV 增长约 <em>17%</em>。转盘抽奖近30天 <strong>6,400+次</strong>；积分净消耗约 <em>9.26 万</em>。《鲟了个者》vibe coding 连续 3 周平台前三，有效使用率 <strong>77.8%</strong>。</p></article>
-          <article className="experience-item"><h3><img src="/assets/portfolio/about/icons/image 6345038.png" alt="阿里巴巴" />阿里巴巴·通义实验室｜AI 视觉美学实习生 <time>2025.10–2026.03</time></h3><p>参与<span>通义万相</span>2.6与2.7版本文生图 / 图像编辑模型的数据体系优化，构建SFT美学标签并参与约 <em>8.3 亿</em> 张训练数据整理。完成“千人千面”“调色盘”等功能设计，撰写《WAN2.7图像生产力指南》累计 <em>13.9万+</em> 阅读。</p></article>
-          <article className="experience-item"><h3><img src="/assets/portfolio/about/icons/image 6345039.png" alt="字节跳动" />字节跳动·抖音政务运营中台｜视觉设计实习生 <time>2025.07–2025.09</time></h3><p>负责抖音政务与文旅活动视觉系统、主视觉 KV、移动端 UI 与 H5 信息层级优化。建立统一视觉规范。使用 Midjourney、Stable Diffusion，即梦进行创意生成与视觉扩展，协同运营迭代，推动 <strong>10+</strong> 个活动页面上线。</p></article>
+          <article className="experience-item"><h3><img src={withBasePath('/assets/portfolio/about/icons/image 6345037.png')} alt="腾讯" />腾讯新闻｜产品体验设计实习生 <time>2026.04–2026.08</time></h3><p>负责<span>腾讯新闻</span>任务中心信息架构、用户增长、界面升级；上线一周日均 PV 增长约 <em>17%</em>。转盘抽奖近30天 <strong>6,400+次</strong>；积分净消耗约 <em>9.26 万</em>。《鲟了个者》vibe coding 连续 3 周平台前三，有效使用率 <strong>77.8%</strong>。</p></article>
+          <article className="experience-item"><h3><img src={withBasePath('/assets/portfolio/about/icons/image 6345038.png')} alt="阿里巴巴" />阿里巴巴·通义实验室｜AI 视觉美学实习生 <time>2025.10–2026.03</time></h3><p>参与<span>通义万相</span>2.6与2.7版本文生图 / 图像编辑模型的数据体系优化，构建SFT美学标签并参与约 <em>8.3 亿</em> 张训练数据整理。完成“千人千面”“调色盘”等功能设计，撰写《WAN2.7图像生产力指南》累计 <em>13.9万+</em> 阅读。</p></article>
+          <article className="experience-item"><h3><img src={withBasePath('/assets/portfolio/about/icons/image 6345039.png')} alt="字节跳动" />字节跳动·抖音政务运营中台｜视觉设计实习生 <time>2025.07–2025.09</time></h3><p>负责抖音政务与文旅活动视觉系统、主视觉 KV、移动端 UI 与 H5 信息层级优化。建立统一视觉规范。使用 Midjourney、Stable Diffusion，即梦进行创意生成与视觉扩展，协同运营迭代，推动 <strong>10+</strong> 个活动页面上线。</p></article>
         </section>
 
         <section className="resume-block projects-block">

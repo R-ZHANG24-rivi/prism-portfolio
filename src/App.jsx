@@ -7,27 +7,28 @@ import PortfolioHome from './components/pages/PortfolioHome';
 import SpectrumPage from './components/pages/SpectrumPage';
 import ProjectPageShell from './components/projects/ProjectPageShell';
 import PrismLoader from './components/ui/PrismLoader';
+import { BASE_PATH, currentAppPath, withBasePath } from './utils/paths';
 
 const CRITICAL_ASSETS = [
-  '/assets/portfolio/home/prism.png',
-  '/assets/portfolio/home/prism-shadow.png',
-  '/assets/portfolio/about/portrait-composite.png',
+  withBasePath('/assets/portfolio/home/prism.png'),
+  withBasePath('/assets/portfolio/home/prism-shadow.png'),
+  withBasePath('/assets/portfolio/about/portrait-composite.png'),
   ...PROJECTS.map((project) => project.pages?.[0] || project.preview),
 ];
 
 export default function App() {
-  const [path, setPath] = useState(window.location.pathname);
+  const [path, setPath] = useState(currentAppPath);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const onPopState = () => setPath(window.location.pathname);
+    const onPopState = () => setPath(currentAppPath());
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
   const navigate = (nextPath) => {
     const nextUrl = new URL(nextPath, window.location.origin);
-    const destination = `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
+    const destination = `${BASE_PATH}${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
     const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     if (current !== destination) window.history.pushState({}, '', destination);
     setPath(nextUrl.pathname);

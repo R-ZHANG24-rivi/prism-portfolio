@@ -9,6 +9,7 @@ import { AboutStage } from './AboutPage';
 import { BeyondSection } from './BeyondPage';
 import { EndingSection } from './EndingPage';
 import useJourneyNavigation from './useJourneyNavigation';
+import { withBasePath } from '../../utils/paths';
 
 export default function PortfolioHome({ onNavigate, projects }) {
   const rootRef = useRef(null);
@@ -42,7 +43,7 @@ export default function PortfolioHome({ onNavigate, projects }) {
         scrolled={currentSection !== 'home'}
       />
       <div className="journey-prism-state" aria-hidden="true">
-        <img src="/assets/portfolio/home/prism.png" alt="" />
+        <img src={withBasePath('/assets/portfolio/home/prism.png')} alt="" />
       </div>
 
       <section className="portfolio-section" id="home" aria-label="Portfolio Home">
@@ -54,8 +55,8 @@ export default function PortfolioHome({ onNavigate, projects }) {
           <span className="home-entry-beam" aria-hidden="true" />
           <HomeRasterGlass side="left" />
           <HomeRasterGlass side="right" />
-          <img className="prism-shadow" src="/assets/portfolio/home/prism-shadow.png" alt="" />
-          <img className="prism-visual" src="/assets/portfolio/home/prism.png" alt="透明折射棱镜" />
+          <img className="prism-shadow" src={withBasePath('/assets/portfolio/home/prism-shadow.png')} alt="" />
+          <img className="prism-visual" src={withBasePath('/assets/portfolio/home/prism.png')} alt="透明折射棱镜" />
           <DisplayTitle variant="home" />
           <div className="home-name" aria-label="张睿作品集"><span>张睿</span><span>作品集</span></div>
           <div className="home-statement"><p>设计是一面棱镜</p><p>折射生活·照亮美好</p></div>

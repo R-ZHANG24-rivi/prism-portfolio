@@ -3,10 +3,11 @@ import climbingGameCover from '../assets/projects/climbing-game.jpg';
 import tongyiWanxiangCover from '../assets/projects/tongyi-wanxiang.jpg';
 import emotionalSynthesizerCover from '../assets/projects/emotional-synthesizer.jpg';
 import recursiveStardustCover from '../assets/projects/recursive-stardust.jpg';
+import { withBasePath } from '../utils/paths';
 
 const portfolioPages = (start, end) => Array.from(
   { length: end - start + 1 },
-  (_, index) => `/assets/portfolio/projects/pages/${String(start + index).padStart(2, '0')}.webp`,
+  (_, index) => withBasePath(`/assets/portfolio/projects/pages/${String(start + index).padStart(2, '0')}.webp`),
 );
 
 export const PROJECTS = [
